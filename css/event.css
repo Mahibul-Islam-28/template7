@@ -1,0 +1,43 @@
+/* Top Section */
+.top-section{
+    padding: 3rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Event.png');
+    background-size: 100% 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-section .inner{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 50%;
+    height: fit-content;
+}
+.top-section h1{
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
+
+/* Media Query */
+@media screen and (max-width: 991px) {
+    .top-section{
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 767px) {
+    .top-section{
+        height: 40vh;
+    }
+    .top-section h1{
+        padding: .5rem 0;
+        font-size: 1.7rem;
+    }
+    .gallery-section img{
+        width: 150px;
+    }
+}

@@ -1,0 +1,301 @@
+/* Top Section */
+.top-section{
+    padding: 3rem 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-section .inner{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(37, 37, 37, 0.5);
+    color: #fff;
+    width: 50%;
+    height: fit-content;
+}
+.top-section h1{
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
+
+/* Text Section */
+.description-section{
+    background: url('../images/home/bg-2.png');
+    padding: 2rem 0;
+}
+.description-section .text-part{
+    padding: 3rem;
+    background-color: #3C4458;
+    color: #fff;
+    width: 70%;
+    margin: 1rem 0;
+}
+
+.description-section .image-part{
+    width: 90%;
+    margin: 3rem 0;
+    margin-left: auto;
+}
+.description-section img{
+    width: 100%;
+    height: fit-content;
+}
+.description-section .text-part:last-child{
+    margin-right: auto;
+}
+.text-part h5{
+    background: #fff;
+    color: #222;
+    padding: 10px;
+    font-weight: bold;
+    width: max-content;
+    text-align: center;
+    margin: 10px auto;
+}
+.description-section h3{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+
+/* Gallery Section */
+.gallery-section{
+    padding: 3rem 0;
+    background: linear-gradient(rgba(147, 147, 147, 0.9), rgba(147, 147, 147, 0.9)), url('../images/home/bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.gallery-section h3{
+    width: max-content;
+    background: #fff;
+    color: #111;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+.gallery-section .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    justify-content: center;
+}
+.gallery-section img{
+    width: 250px;
+    height: fit-content;
+    margin: .5rem;
+}
+
+.gallery-section .load-btn{
+    text-decoration: none;
+    color: #111;
+    background-color: #fff;
+    padding: 10px 25px;
+    margin: 1rem auto;
+    font-weight: bold;
+}
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 94%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.gallery-item {
+    flex-basis: 32.7%;
+    margin-bottom: 6px;
+    opacity: .85;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-content {
+    font-size: .8em;
+}
+
+.lightbox {
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    transition: ease-in-out 2s;
+}
+
+.lightbox-content {
+    position: relative;
+    width: fit-content;
+    height: inherit;
+    max-height: 70%;
+    max-width: 80%;
+    overflow: hidden;
+    margin: 5% auto;
+    margin-top: 100px;
+}
+
+.lightbox-content img {
+    border-radius: 5px;
+    border: 7px solid white;
+    border-top: 35px solid white;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 9px;
+    top: 45%;
+    cursor: pointer;
+}
+
+.lightbox-close {
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    color: #333;
+    padding: 10px 15px;
+    padding-top: 7px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.lightbox-index {
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    color: #333;
+    padding: 10px;
+    padding-top: 5px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lightbox-prev {
+    left: 0;
+}
+
+.lightbox-next {
+    right: 0;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    opacity: .8;
+}
+
+@media (max-width: 767px) {
+    .gallery-container {
+        width: 100%;
+    }
+
+    .gallery-item {
+        flex-basis: 49.80%;
+        margin-bottom: 3px;
+    }
+
+    .lightbox-content {
+        width: 80%;
+        height: 60%;
+        margin: 15% auto;
+    }
+
+    .lightbox-content img {
+        border-top: 30px solid white;
+    }
+
+    .lightbox-index {
+        padding-top: 7px;
+    }
+
+    .lightbox-close {
+        padding: 6px 10px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex-basis: 100%;
+        margin-bottom: 1px;
+    }
+
+    .lightbox-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .top-section{
+        height: 50vh;
+    }
+    .description-section .image-part{
+        width: 90%;
+    }
+    .description-section .image-part img{
+        width: 100%;
+    }
+    .description-section .text-part{
+        width: 80%;
+    }
+    .gallery-section img{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .top-section{
+        height: 35vh;
+    }
+    .top-section .inner{
+        width: 70%;
+    }
+    .top-section h1{
+        padding: .5rem 0;
+        font-size: 1.5rem;
+    }
+    .gallery-section img{
+        width: 150px;
+    }
+    .description-section .text-part{
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
+    .text-part h5{
+        padding: 7px;
+        font-size: 1.1rem;
+    }
+    .description-section .image-part{
+        width: 100%;
+    }
+    .description-section h3{
+        font-size: 1.1rem;
+    }
+}
